@@ -1,0 +1,38 @@
+vtp mode transparent
+spanning-tree mode rapid-pvst
+errdisable recovery cause all
+port-channel load-balance src-dst-ip
+
+no ip http server
+
+snmp-server community test RO
+snmp-server community test RW
+vlan 100
+ name Data
+vlan 101
+ name Voice
+vlan 102
+ name Test 
+interface vlan 1
+ description In-band Management
+
+ip dhcp snooping vlan 100,101
+no ip dhcp snooping information option
+ip dhcp snooping
+
+spanning-tree portfast bpduguard default
+
+interface range e 2/0 - 3
+ switchport
+ switchport access vlan 100
+ switchport voice vlan 101
+ switchport host
+ switchport port-security maximum 2 
+ switchport port-security
+ switchport port-security aging time 2
+ switchport port-security aging type inactivity 
+ switchport port-security violation restrict 
+ ip dhcp snooping limit rate 100
+ ip verify source
+ exit
+

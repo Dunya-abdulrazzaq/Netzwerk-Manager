@@ -1,0 +1,18 @@
+[    {
+        "host": "192.168.52.150",
+        "device_type": "cisco_ios",
+        "net_driver": "ios",
+        "username": "cisco",
+        "password": "cisco",
+         "secret": "cisco"
+
+    },
+    {
+        "host": "192.168.52.120",
+        "device_type": "cisco_ios",
+        "net_driver": "ios",
+        "username": "cisco",
+        "password": "cisco",
+         "secret": "cisco"
+    }
+]

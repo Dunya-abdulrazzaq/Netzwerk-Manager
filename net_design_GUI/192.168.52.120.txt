@@ -1,0 +1,8 @@
+vlan 100
+ name Data
+vlan 101
+ name Voice
+vlan 102
+ name Test
+interface vlan 1
+ description In-band Management

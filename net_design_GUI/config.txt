@@ -1,0 +1,8 @@
+vlan 400
+ name Datatest
+vlan 300
+ name Voicetest
+vlan 105
+ name Test
+interface vlan 400
+ description In-band Management
